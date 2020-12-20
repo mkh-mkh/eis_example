@@ -147,3 +147,23 @@ foreign key (author_id) references Employee(employee_id),
 foreign key (performer_id) references Employee(employee_id));
 
 go
+
+create index discipline_IX on Lesson(discipline_id);
+
+create index lesson_type_IX on Lesson(lesson_type_id);
+
+create index room_id_IX on Lesson(lesson_type_id);
+
+create index lesson_group_id_IX on LessonGroup(group_id);
+
+create index lesson_lesson_id_IX on LessonGroup(lesson_id);
+
+create index student_group_id_IX on Student(group_id);
+
+create index performer_id_IX on Task(performer_id);
+
+create index student_user_IX on Student(userid);
+
+create index employee_user_IX on Employee(userid);
+
+go
